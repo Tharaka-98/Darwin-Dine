@@ -18,7 +18,8 @@ export function FadeIn({
   ...rest
 }: SimpleProps) {
   const reduce = useReducedMotion();
-  const Component: any = motion[as as any] ?? motion.div;
+  const motionByTag = motion as unknown as Record<string, React.ElementType>;
+  const Component: React.ElementType = motionByTag[as] ?? motion.div;
   if (reduce) {
     return (
       <Component className={className} {...rest}>
@@ -48,7 +49,8 @@ export function ScaleIn({
   ...rest
 }: SimpleProps) {
   const reduce = useReducedMotion();
-  const Component: any = motion[as as any] ?? motion.div;
+  const motionByTag = motion as unknown as Record<string, React.ElementType>;
+  const Component: React.ElementType = motionByTag[as] ?? motion.div;
   if (reduce) {
     return (
       <Component className={className} {...rest}>
