@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import path from "path";
 
 const nextConfig: NextConfig = {
   images: {
@@ -10,8 +9,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Silence workspace root inference warning in nested repo setup
-  outputFileTracingRoot: path.join(__dirname, ".."),
+  // Keep default output tracing root; custom roots can break Vercel path resolution
 };
 
 export default nextConfig;
