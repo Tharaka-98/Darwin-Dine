@@ -1,4 +1,10 @@
 "use client";
+export const metadata = {
+  title: "Menu",
+  description:
+    "Seasonal menu featuring Top End seafood, native produce, and wood-fired plates.",
+  alternates: { canonical: "/menu" },
+};
 import Image from "next/image";
 import { useState } from "react";
 import { FadeIn, ScaleIn } from "@/components/Motion";

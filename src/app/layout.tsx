@@ -10,7 +10,12 @@ export const metadata: Metadata = {
     template: "%s | Darwin Dine",
   },
   description: "Coastal-inspired modern Australian restaurant in Darwin, NT.",
-  metadataBase: new URL("https://darwin-dine.example.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://darwin-dine.vercel.app"
+  ),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Darwin Dine | Top End Restaurant",
     description: "Coastal-inspired modern Australian restaurant in Darwin, NT.",
