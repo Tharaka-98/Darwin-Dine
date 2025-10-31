@@ -1,6 +1,7 @@
 "use client";
 import { motion, MotionProps, useReducedMotion } from "framer-motion";
 import React from "react";
+import type { JSX } from "react";
 
 type SimpleProps = React.PropsWithChildren<{
   delay?: number;
